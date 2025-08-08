@@ -53,4 +53,7 @@ void mergeSort(int* array, int length) {
     mergeSort(leftArray, newSize);
     mergeSort(rightArray, length-newSize);
     merge(leftArray, rightArray, array, length);
+
+    free(leftArray);
+    free(rightArray);
 }
